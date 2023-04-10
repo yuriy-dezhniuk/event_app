@@ -1,9 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-}
-  
-#content {
-    margin: 20px;
-    color: red;
-    font-size: 30px;
+.menu {
+  padding:0px 10px; 
+  position: fixed; 
+  /* margin-top: -45px; */
 }
