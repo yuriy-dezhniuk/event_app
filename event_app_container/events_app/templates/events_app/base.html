@@ -4,21 +4,56 @@
 <html>
   <head>
     <title>{% block title %}Default Title{% endblock %}</title>
-    {% block css %}
+        {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> {% endcomment %}
         <link rel="stylesheet" type="text/css" href="{% static '/base.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% block css %}
     {% endblock %}
   </head>
   <body>
-    <div id="content">
-      <div class="topnav">
-        <a class="logo" href="#home">Events app</a>
-        <a class="active" href="#home">Log in/Log out</a>
-        <a href="#news">Profile</a>
-        <a href="#contact">Organize Event</a>
-        <a href="#organize-event">View Events</a> 
-      </div> 
-      {% block content %}
-      {% endblock %}
+    <nav class="blue menu">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Events App</a>
+    
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons">menu</i>
+        </a>
+    
+        <ul class="right hide-on-med-and-down "  >
+          <li><a href="#">View Events</a></li>
+          <li><a href="#">Create Event</a></li>
+          <li><a href="#">Login/Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <ul class="sidenav" id="mobile-nav">
+          <li><a href="#">View Events</a></li>
+          <li><a href="#">Create Event</a></li>
+          <li><a href="#">Login/Logout</a></li>
+    </ul>
+
+    <div class="container">
+        <!-- Page Content goes here -->
+        {% block content %}
+        {% endblock %}
+        {% comment %} <div>
+          {% lorem 9 b random %}
+          {% lorem 9 b random %}
+          {% lorem 9 b random %}
+          {% lorem 9 b random %}
+          {% lorem 9 b random %}
+          {% lorem 9 b random %}
+        </div> {% endcomment %}
     </div>
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> {% endcomment %}
+    <script>
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+    </script>
   </body>
 </html>

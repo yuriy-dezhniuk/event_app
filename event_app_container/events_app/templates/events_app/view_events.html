@@ -1,8 +1,73 @@
 {% extends "events_app/base.html" %}
 
-{% block title %}Child Title{% endblock %}
+{% load static %}
+
+{% block title %}Full list of events{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static '/view_events.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h1>Hello, this is the page with full list of events</h1>
-    <p>This is the content for the child template.</p>
+    <div class="row top-padding-30">
+      <div class="col s12 m6 offset-m3">
+
+        <div class="card center-align item-index-5">
+          <div class="card-image">
+            <img src="https://www.imgcorporations.com/images/bg-img.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+
+        <div class="card center-align item-index-5">
+            <div class="card-image">
+              <img src="https://www.imgcorporations.com/images/bg-img.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+
+          <div class="card center-align item-index-5">
+            <div class="card-image">
+              <img src="https://www.imgcorporations.com/images/bg-img.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+
+          <div class="card center-align item-index-5">
+            <div class="card-image">
+              <img src="https://www.imgcorporations.com/images/bg-img.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+
+      </div>
+    </div>
 {% endblock %}
