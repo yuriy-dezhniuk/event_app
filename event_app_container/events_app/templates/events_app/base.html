@@ -16,24 +16,24 @@
   <body>
     <nav class="blue menu">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Events App</a>
+        <a href="{% url 'view_events' %}" class="brand-logo">Events App</a>
     
         <a href="#" class="sidenav-trigger" data-target="mobile-nav">
           <i class="material-icons">menu</i>
         </a>
     
         <ul class="right hide-on-med-and-down "  >
-          <li><a href="#">View Events</a></li>
-          <li><a href="#">Create Event</a></li>
-          <li><a href="#">Login/Logout</a></li>
+          <li><a href="{% url 'view_events' %}">View Events</a></li>
+          <li><a href="{% url 'organize_event' %}">Organize Event</a></li>
+          <li><a href="{% url 'login_logout' %}">Login/Logout</a></li>  
         </ul>
       </div>
     </nav>
     
     <ul class="sidenav" id="mobile-nav">
-          <li><a href="#">View Events</a></li>
-          <li><a href="#">Create Event</a></li>
-          <li><a href="#">Login/Logout</a></li>
+          <li><a href="{% url 'view_events' %}">View Events</a></li>
+          <li><a href="{% url 'organize_event' %}">Organize Event</a></li>
+          <li><a href="{% url 'login_logout' %}">Login/Logout</a></li>
     </ul>
 
     <div class="container">
