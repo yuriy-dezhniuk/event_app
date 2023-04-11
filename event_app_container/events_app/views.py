@@ -10,4 +10,7 @@ def event(request):
 def organize_event(request):
     return render(request, 'events_app/organize_event.html')
 
+def login_logout(request):
+    return render(request, 'events_app/login_logout.html')
+
 
