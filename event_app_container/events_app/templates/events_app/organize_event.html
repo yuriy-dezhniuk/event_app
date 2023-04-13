@@ -1,8 +1,89 @@
 {% extends "events_app/base.html" %}
 
+{% load static %}
+
 {% block title %}Organize Event{% endblock %}
 
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static '/organize_event.css' %}">
+{% endblock %}
+
 {% block content %}
-    <h1>Hello, this is the page for organazing new events</h1>
-    <p>This is the content for the child template.</p>
+{% comment %} <div class="row top-padding-30">
+    <div class="col s12 m6 offset-m3">
+        <h1>Organize a new event</h1>
+        <p>This is the content for the child template.</p>
+    </div>
+</div> {% endcomment %}
+
+<div class="row top-padding-30">
+    <form class="col s12">
+      <h1>Organize a new event</h1>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Title" id="event_title" type="text" class="validate">
+          <label for="event_title">Title*</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Location" id="event_location" type="text" class="validate">
+          <label for="event_location">Location*</label>
+        </div>
+      </div>
+
+
+      {% comment %} <div class="row">
+        <div class="file-field input-field s12">
+            <div class="btn upload_btn">
+              <span>Upload Image</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Choose an image">
+            </div>
+        </div>
+      </div> {% endcomment %}
+
+      <div class="file-field input-field">
+        <div class="btn upload_btn">
+          <span>Upload Image</span>
+          <input type="file">
+        </div>
+        <input class="validate img_input" type="text" readonly placeholder="">
+      </div>
+      
+      
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          This is an inline input field:
+          <div class="input-field inline">
+            <input id="email_inline" type="email" class="validate">
+            <label for="email_inline">Email</label>
+            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 {% endblock %}

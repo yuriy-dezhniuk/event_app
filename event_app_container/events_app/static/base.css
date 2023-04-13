@@ -1,5 +1,12 @@
 .menu {
   padding:0px 10px; 
   position: fixed; 
-  /* margin-top: -45px; */
+}
+
+.top-padding-30 {
+  padding-top: 70px;
+}
+
+h1 {
+  text-align: center;
 }

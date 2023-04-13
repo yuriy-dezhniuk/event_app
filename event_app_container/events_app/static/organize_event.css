@@ -1,0 +1,24 @@
+input:focus {
+    border-bottom: 1px solid #2196f3 !important;
+    box-shadow: 0 1px 0 0 #2196f3 !important;
+}
+
+input:focus + label {
+    color: #2196f3 !important;
+}
+
+.upload_btn {
+    background-color: #2196f3;
+}
+
+.upload_btn:hover {
+    transition-duration: 10ms;
+    background-color: #57abf1;
+}
+
+.img_input {
+    max-width: 20px;
+    margin-left: -30px !important;
+    border-bottom: none !important;
+}
+  
