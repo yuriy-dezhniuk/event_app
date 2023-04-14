@@ -1,8 +1,63 @@
 {% extends "events_app/base.html" %}
 
+{% load static %}
+
 {% block title %}Organize Event{% endblock %}
 
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static '/organize_event.css' %}">
+{% endblock %}
+
 {% block content %}
-    <h1>Hello, this is the page for organazing new events</h1>
-    <p>This is the content for the child template.</p>
+
+  <div class="row top-padding-30">
+    <form class="col s12">
+      <h1>Organize a new event</h1>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Title" id="event_title" type="text" class="validate">
+          <label for="event_title">Title*</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Location" id="event_location" type="text" class="validate">
+          <label for="event_location">Location*</label>
+        </div>
+      </div>
+
+      <div class="file-field input-field">
+        <div class="btn upload_btn">
+          <span>Upload Image</span>
+          <input type="file">
+        </div>
+        <input class="validate img_input" type="text" readonly placeholder="">
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="event_description" class="materialize-textarea"></textarea>
+          <label for="event_description">Description</label>
+        </div>
+      </div>
+
+      <input type="text" class="datepicker" id="event_data" value="Choose a Data"><br/><br/>
+
+      <input type="text" class="timepicker" id="event_time" value="Choose a Time"><br/><br/>
+
+      <input type="submit" value="Submit" class="submit-btn btn">
+    </form>
+  </div>
+{% endblock %}
+
+{% block script %}
+  {% comment %} darapicker {% endcomment %}
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+
+  {% comment %} timepicker {% endcomment %}
+  $(document).ready(function(){
+    $('.timepicker').timepicker();
+  });
 {% endblock %}
