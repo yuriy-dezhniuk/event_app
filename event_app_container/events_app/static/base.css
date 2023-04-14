@@ -1,6 +1,7 @@
 .menu {
   padding:0px 10px; 
   position: fixed; 
+  z-index: 10;
 }
 
 .top-padding-30 {

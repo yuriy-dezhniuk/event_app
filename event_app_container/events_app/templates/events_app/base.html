@@ -41,12 +41,12 @@
         {% block content %}
         {% endblock %}
         <div>
+          {% comment %} {% lorem 9 b random %}
           {% lorem 9 b random %}
           {% lorem 9 b random %}
           {% lorem 9 b random %}
           {% lorem 9 b random %}
-          {% lorem 9 b random %}
-          {% lorem 9 b random %}
+          {% lorem 9 b random %} {% endcomment %}
         </div>
     </div>
     {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> {% endcomment %}
@@ -54,6 +54,8 @@
       $(document).ready(function(){
         $('.sidenav').sidenav();
       });
+      {% block script %}
+      {% endblock %}
     </script>
   </body>
 </html>
