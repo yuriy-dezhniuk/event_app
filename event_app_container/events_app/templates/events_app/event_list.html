@@ -16,11 +16,13 @@
         {% for event in events %}
           <div class="card center-align item-z-index-5">
             <div class="card-image">
-              <img src="https://www.imgcorporations.com/images/bg-img.jpg">
+              <img src="{{ event.image.url }}"> 
               <span class="card-title">{{ event.title }}</span>
             </div>
             <div class="card-content">
-              <p>{{ event.description }}</p>
+              <span>{{ event.event_data }}</span></br>
+              <span>{{ event.location }}</span></br></br>
+              <p>{{ event.description|truncatechars:400 }}</p>
             </div>
             <div class="card-action">
               <a href="#">Detail View</a>

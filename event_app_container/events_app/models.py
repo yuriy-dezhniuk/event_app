@@ -4,7 +4,7 @@ from django.db import models
 class Event(models.Model):
     title = models.TextField(max_length=300)
     location = models.TextField(max_length=250)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='events')
     description = models.TextField()
     event_data = models.DateField()
 
